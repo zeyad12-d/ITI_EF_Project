@@ -44,9 +44,7 @@ namespace CodeFirstTask.Data
                 .WithMany(p => p.Employess)
                 .UsingEntity(j => j.ToTable("EmployeeProjects"));
 
-            // =======================
-            // 🔹 Data Seeding
-            // =======================
+          
 
             // Departments
             modelBuilder.Entity<Department>().HasData(
@@ -77,3 +75,4 @@ namespace CodeFirstTask.Data
         }
     }
 }
+
