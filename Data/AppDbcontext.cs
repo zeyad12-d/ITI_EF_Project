@@ -44,9 +44,7 @@ namespace CodeFirstTask.Data
                 .WithMany(p => p.Employess)
                 .UsingEntity(j => j.ToTable("EmployeeProjects"));
 
-            // =======================
-            // 🔹 Data Seeding
-            // =======================
+          
 
             // Departments
             modelBuilder.Entity<Department>().HasData(
@@ -57,7 +55,6 @@ namespace CodeFirstTask.Data
                 new Department { DepartmentId = 5, DepartmentName = "Sales" }
             );
 
-            // Projects (ضيف StartDate Default عشان ما يكسرش)
             modelBuilder.Entity<Project>().HasData(
                 new Project { ProjectId = 1, ProjectName = "ERP System", StartDate = DateTime.Now },
                 new Project { ProjectId = 2, ProjectName = "Website Redesign", StartDate = DateTime.Now },
@@ -77,3 +74,5 @@ namespace CodeFirstTask.Data
         }
     }
 }
+
+
